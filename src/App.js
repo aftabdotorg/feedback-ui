@@ -8,6 +8,7 @@ import FeedbackStats from './components/FeedbackStats';
 import FeedbackForm from './components/FeedbackForm';
 import AboutPage from './components/pages/AboutPage';
 import AboutLinkIcon from './components/AboutLinkIcon';
+import NotFound from './components/NotFound';
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -43,6 +44,7 @@ function App() {
             }
           ></Route>
           <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
