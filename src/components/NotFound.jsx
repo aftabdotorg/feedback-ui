@@ -6,6 +6,7 @@ const NotFound = () => {
     justifyContent: 'center',
     alignItems: 'center',
     margin: 'auto',
+    borderRadius:"1rem"
   };
 
   return (
