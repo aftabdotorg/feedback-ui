@@ -1,28 +1,43 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Card from './shared/Card';
 import Button from './shared/Button';
 import RatingSelect from './RatingSelect';
 import FeedbackContext from '../context/FeedbackContext';
 
 const FeedbackForm = () => {
+  const { addFeedback, feedbackEdit, updateFeedback } =
+    useContext(FeedbackContext);
+
+  useEffect(() => {
+    setBtnDisabled(false);
+    setText(feedbackEdit.item.text);
+    setRating(feedbackEdit.item.rating);
+  }, [feedbackEdit]);
+
   const [text, setText] = useState('');
   const [rating, setRating] = useState(10);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState('');
 
-  const { addFeedback } = useContext(FeedbackContext);
-
   const handleSumbmit = (e) => {
     e.preventDefault();
 
-    if (text.trim().length > 10) {
+    if (text !== undefined && text.trim().length > 10) {
       const newFeedback = {
         text,
         rating,
       };
 
-      addFeedback(newFeedback);
+      if (feedbackEdit.edit === true) {
+        // update old
+        updateFeedback(feedbackEdit.item.id, newFeedback);
+      } else {
+        // add new
+        addFeedback(newFeedback);
+      }
+
       setText('');
+      feedbackEdit.edit = false;
     }
   };
 
@@ -30,7 +45,7 @@ const FeedbackForm = () => {
     if (text === '') {
       setBtnDisabled(true);
       setMessage(null);
-    } else if (text !== '' && text.trim().length <= 10) {
+    } else if (text !== '' && text !== undefined && text.trim().length <= 10) {
       setMessage('Text must be atleast 10 characters !');
       setBtnDisabled(true);
     } else {

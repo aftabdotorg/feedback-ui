@@ -211,6 +211,8 @@ input:focus {
   margin: 10px 0;
 }
 
+/* Like button */
+
 .like-btn{
   position: absolute;
   left: -10;
