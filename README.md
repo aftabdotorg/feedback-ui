@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Feeback App
+### Technologies used
+1. React 
+2. Framer-motion 
+3. Context api
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+1. Feedback UI is template app built for taking review and ratings froms users.
+2. User can apply CRUD functionality on any review.(Create ,Read, Update, Delete)
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+### Landing page - 
+![Feedback-UI](./images/Screenshot%20from%202023-06-07%2020-38-06.png).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project is made using 2 approach - 
+1. Prop drilling (Beginner)
+2. Context api (Professional)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### To clone and run it in local machine -
+1. Clone the repo with desired branch(master | context-api).
+2. cd into project folder where package.json is present.
+3. Type ` npm start ` in terminal to fire up project.  
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## How to use
+1. For adding feedback, type review in input box which validates input for more than 10 characters.
+2. Select desired rating from above row of number ratings.
+3. Once you have selected rating and typed desired review click on send to add review.
+4. The stats will show number of reviews along with average ratings.
+5. To edit or modify previously added review click on edit icon in list item.
+6. This will start edit mode and input box will show your selected review . you can modify your choice. 
+6. To delete any feedback click on cross icon which will validate deletion.
+7. To like any review heart icon is provided. 
+8. Review count and Average of ratings will change as per modifications. 
+9. There is about page which depicts the version of app and some info.
